@@ -1,5 +1,5 @@
 === On deck ===
-* Scaffold all pages
+
 
 === To do ===
 * Add ajax routes
@@ -12,5 +12,5 @@
 === Done ===
 * Wrap as a cyclone project
 * Get templates working
-
+* Scaffold all pages
 
