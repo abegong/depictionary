@@ -1,0 +1,14 @@
+#guess-words li{
+    text-align: center;
+    cursor: pointer;
+}
+
+#timer{
+    position:absolute;
+    right:0;
+    top:0;
+    width:100px;
+    background:#000;
+    text-align:center;
+    color:#fff;
+}

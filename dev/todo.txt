@@ -1,0 +1,11 @@
+=== On deck ===
+* Wrap as a cyclone project
+
+=== To do ===
+* Get timer working
+* Add theme
+* Clean up instructions
+* Add ajax routes
+
+
+=== Done ===
