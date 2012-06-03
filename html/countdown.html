@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div data-role="page" id="countdown" data-transition="fade">
+    <div data-role="header">
+        <a id="pause" href="/pause" data-direction="reverse" data-role="button" data-icon="arrow-l">Pause</a>
+        <h1>[guessing game]</h1>
+        <a id="counter"><span id="game-points">135</span> : <span id="game-docs">14</span></a>
+    </div>
+
+    <div data-role="content">
+        <p><a href="/game" data-role="button" data-theme="b"><br/><br/><br/>Ready?<br/><br/><br/><br/></a></p> 
+    </div>
+</div>
+{% end block %}

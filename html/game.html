@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div data-role="page" id="play" data-transition="fade">
+    <div data-role="header">
+        <a id="pause" href="/pause" data-direction="reverse" data-role="button" data-icon="arrow-l">Pause</a>
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+    </div>
+    <div id="timer" class="ui-corner-bottom ui-widget"><h2 id="game-time">60:00</h2></div>
+
+    <div data-role="content">
+        <ul id="guess-words" data-role="listview" data-inset="true">
+	        <li><h3>word 1</h3></li>
+	        <li><h3>word 2</h3></li>
+	        <li><h3>word 3</h3></li>
+	        <li><h3>word 4</h3></li>
+	        <li><h3>word 5</h3></li>
+	        <li><h3>word 6</h3></li>
+	        <li><h3>word 7</h3></li>
+	        <li><h3>word 8</h3></li>
+        </ul>
+    </div>
+</div>
+{% end block %}

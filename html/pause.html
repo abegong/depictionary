@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div data-role="page" id="pause" data-transition="fade">
+    <div data-role="header">
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+        <a id="quit" class="ui-btn-right" data-icon="home" data-iconpos="right" href="/">Quit game</a>
+    </div>
+
+    <div data-role="content">
+        <p><b>Topic : </b>[Text entry]</p>
+        <p><b>Difficulty : </b>[Slider]</p>
+<!--
+        <p style="text-align:center;">
+            <h3>Scores</h3>
+            <table style="margin:auto;">
+                <tr><td><b>Alfred</b></td><td>:</td><td>100</td></tr>
+                <tr><td><b>Beatrice</b></td><td>:</td><td>80</td></tr>
+                <tr><td><b>Channing</b></td><td>:</td><td>70</td></tr>
+                <tr><td><b>Doug</b></td><td>:</td><td>110</td></tr>
+            </table>
+        </p>
+-->
+        <a id="pause" href="/game" data-direction="reverse" data-role="button" data-theme="b">Resume</a>
+    </div>
+</div>
+{% end block %}
