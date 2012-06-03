@@ -1,10 +1,10 @@
 === On deck ===
+* Get timer working
 
 
 === To do ===
 * Add ajax routes
 
-* Get timer working
 * Add themes
 * Clean up instructions
 

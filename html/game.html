@@ -1,5 +1,43 @@
 {% extends "base.html" %}
 
+{% block script %}
+<script language="javascript" type="text/javascript">
+var timer = 60000;
+function countdown(){
+    timer -= 100;
+    $("#game-time").html( (timer/1000).toFixed(1) );
+    if( timer > 0 ){
+        setTimeout(countdown, 100);
+    }
+    else{
+        //The game is now over
+    }
+}
+
+$("#play").live("pageinit", function() {
+    timer = 6000;
+
+    $("#guess-words li").each(function(i,w){
+        set_word(i,w);
+    });
+
+    $("#guess-words li").click(function(){
+        set_word(2,this);
+    });
+
+    game_time = 599;
+    $("#game-time").html( Math.floor(game_time/10)+"."+(game_time%10) );
+
+    $("#guess-words li").swipe(function(){
+        $(this).hide();
+    });
+
+    setTimeout(countdown, 100);
+});
+
+</script>
+{% end block %}
+
 {% block main %}
 <div data-role="page" id="play" data-transition="fade">
     <div data-role="header">

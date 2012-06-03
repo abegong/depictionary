@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="{{ static_url( 'depictionary.css') }}" /> 
     <script language="javascript" type="text/javascript" src="{{ static_url( 'depictionary.js') }}"></script>
+
+    {% block script %}
+    {% end block %}
 <body> 
 {% block main %}{% end %}
 </body>

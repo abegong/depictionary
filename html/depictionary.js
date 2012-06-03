@@ -10,21 +10,3 @@ function set_word(t,w){
         .html(next_word)
         .fadeIn(200*t);
 }
-
-$("#play").live("pageinit", function() {
-    $("#guess-words li").each(function(i,w){
-        set_word(i,w);
-    });
-
-    $("#guess-words li").click(function(){
-        set_word(2,this);
-    });
-
-    game_time = 599;
-    $("#game-time").html( Math.floor(game_time/10)+"."+(game_time%10) );
-
-//    $("#guess-words li").swipe(function(){
-//        $(this).hide();
-//    });
-});
-
