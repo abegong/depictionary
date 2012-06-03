@@ -1,11 +1,14 @@
 === On deck ===
-* Wrap as a cyclone project
+* Scaffold all pages
 
 === To do ===
-* Get timer working
-* Add theme
-* Clean up instructions
 * Add ajax routes
+
+* Get timer working
+* Add themes
+* Clean up instructions
 
 
 === Done ===
+* Wrap as a cyclone project
+

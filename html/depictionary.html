@@ -1,0 +1,124 @@
+ <!DOCTYPE html> 
+    <html class="ui-mobile-rendering">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>depictionary</title> 
+
+    <link rel="stylesheet" href="jquery-mobile/jquery.mobile.min.css" /> 
+    <script language="javascript" type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script language="javascript" type="text/javascript" src="jquery-mobile/jquery.mobile.min.js"></script>
+
+    <link rel="stylesheet" href="ggame.css" /> 
+    <script language="javascript" type="text/javascript" src="ggame.js"></script>
+<body> 
+
+<!---------------------------------------------------------------------------->
+<div data-role="page" id="setup" data-transition="slidedown">
+    <div data-role="header" data-position="fixed">
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+    </div>
+
+    <div data-role="content">
+        <p><b>Players : </b>[Text entry]</p>
+
+        <p><b>Advanced preferences</b></p>
+<!--
+        <p><b>Topic : </b>[Text entry]</p>
+        <p><b>Difficulty : </b>[Slider]</p>
+        <p><b>Speed : </b>[Slider]</p>
+        <p><b>Replacement? : </b>[Yes/no]</p>
+-->
+<!--
+        <div data-role="collapsible">
+            <h3>Advanced options</h3>
+            <p>[This is a description of how the civil-o-meter works overall.]</p>
+
+            <p>The best way to learn is by doing. We've designed a simple game to learn the civil-o-meter. Along the way, you'll contribute data to the project, and learn just how hard it is to agree on what civility really means.</p>
+        </div>
+-->
+
+        <p><a href="#countdown" data-role="button" data-theme="b">Start a game</a></p> 
+
+<!--        <div data-role="collapsible"> -->
+            <h3>Rules</h3>
+            <p><b>Object</b>: Score points by depicting and guessing as many words as possible.</p>
+
+            <p><b>Turns</b>: Players take turns as the depictor.  As depictor, you get 1 minute and 10 words.  Your goal is to get the other players to guess as many words as possible within one minute.  You have <span>1</span> minute to get 0 words and 1 minute.  This is a fast-paced, creative game.  Everyone is always playing.</p>
+
+            <p><b>Object</b>: No words or letters.  You can pantomime, draw pictures, make sounds effects&mdash;anything except use words, letters, and numbers.  (When in doubt, anything that appears on a standard keyboard is off-limits.)</p>
+
+            <p><b>Scoring</b>: When you are the depictor, you score 3 points for every word guessed.  When you are guessing, you score one point for each word you guess.</p>
+
+            <p>Teams: there are no teams</p>
+<!--        </div> -->
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+
+<div data-role="page" id="play" data-transition="fade">
+    <div data-role="header">
+        <a id="pause" href="#pause" data-direction="reverse" data-role="button" data-icon="arrow-l">Pause</a>
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+    </div>
+    <div id="timer" class="ui-corner-bottom ui-widget"><h2 id="game-time">60:00</h2></div>
+
+    <div data-role="content">
+        <ul id="guess-words" data-role="listview" data-inset="true">
+	        <li><h3>word 1</h3></li>
+	        <li><h3>word 2</h3></li>
+	        <li><h3>word 3</h3></li>
+	        <li><h3>word 4</h3></li>
+	        <li><h3>word 5</h3></li>
+	        <li><h3>word 6</h3></li>
+	        <li><h3>word 7</h3></li>
+	        <li><h3>word 8</h3></li>
+        </ul>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+
+<div data-role="page" id="pause" data-transition="fade">
+    <div data-role="header">
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+        <a id="quit" class="ui-btn-right" data-icon="home" data-iconpos="right" href="#setup">Quit game</a>
+    </div>
+
+    <div data-role="content">
+        <p><b>Topic : </b>[Text entry]</p>
+        <p><b>Difficulty : </b>[Slider]</p>
+<!--
+        <p style="text-align:center;">
+            <h3>Scores</h3>
+            <table style="margin:auto;">
+                <tr><td><b>Alfred</b></td><td>:</td><td>100</td></tr>
+                <tr><td><b>Beatrice</b></td><td>:</td><td>80</td></tr>
+                <tr><td><b>Channing</b></td><td>:</td><td>70</td></tr>
+                <tr><td><b>Doug</b></td><td>:</td><td>110</td></tr>
+            </table>
+        </p>
+-->
+        <a id="pause" href="#play" data-direction="reverse" data-role="button" data-theme="b">Resume</a>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------->
+
+<div data-role="page" id="countdown" data-transition="fade">
+    <div data-role="header">
+        <a id="pause" href="#pause" data-direction="reverse" data-role="button" data-icon="arrow-l">Pause</a>
+        <h1>[guessing game]</h1>
+        <a id="counter"><span id="game-points">135</span> : <span id="game-docs">14</span></a>
+    </div>
+
+    <div data-role="content">
+        <p><a href="#play" data-role="button" data-theme="b"><br/><br/><br/>Ready?<br/><br/><br/><br/></a></p> 
+    </div>
+</div>
+
+</body>
+</html>
+

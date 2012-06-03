@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div data-role="page" id="setup" data-transition="slidedown">
+    <div data-role="header" data-position="fixed">
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+    </div>
+
+    <div data-role="content">
+        <p><b>Players : </b>[Text entry]</p>
+
+        <p><b>Advanced preferences</b></p>
+<!--
+        <p><b>Topic : </b>[Text entry]</p>
+        <p><b>Difficulty : </b>[Slider]</p>
+        <p><b>Speed : </b>[Slider]</p>
+        <p><b>Replacement? : </b>[Yes/no]</p>
+-->
+<!--
+        <div data-role="collapsible">
+            <h3>Advanced options</h3>
+            <p>[This is a description of how the civil-o-meter works overall.]</p>
+
+            <p>The best way to learn is by doing. We've designed a simple game to learn the civil-o-meter. Along the way, you'll contribute data to the project, and learn just how hard it is to agree on what civility really means.</p>
+        </div>
+-->
+
+        <p><a href="#countdown" data-role="button" data-theme="b">Start a game</a></p> 
+
+<!--        <div data-role="collapsible"> -->
+            <h3>Rules</h3>
+            <p><b>Object</b>: Score points by depicting and guessing as many words as possible.</p>
+
+            <p><b>Turns</b>: Players take turns as the depictor.  As depictor, you get 1 minute and 10 words.  Your goal is to get the other players to guess as many words as possible within one minute.  You have <span>1</span> minute to get 0 words and 1 minute.  This is a fast-paced, creative game.  Everyone is always playing.</p>
+
+            <p><b>Object</b>: No words or letters.  You can pantomime, draw pictures, make sounds effects&mdash;anything except use words, letters, and numbers.  (When in doubt, anything that appears on a standard keyboard is off-limits.)</p>
+
+            <p><b>Scoring</b>: When you are the depictor, you score 3 points for every word guessed.  When you are guessing, you score one point for each word you guess.</p>
+
+            <p>Teams: there are no teams</p>
+<!--        </div> -->
+    </div>
+</div>
+{% end block %}
