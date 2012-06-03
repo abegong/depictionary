@@ -1,0 +1,2 @@
+Twisted==12.0.0
+cyclone==1.0-rc3
