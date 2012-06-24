@@ -28,10 +28,10 @@ var DPManager = {
         return(word_list[Math.floor(Math.random()*word_list.length)]);
     },
 
-    set_word : function(t,w){
+    showWord : function(t,w){
         $("h3", w)
             .hide()
-            .html(next_word)
+            .html(DPManager._words[t])
             .fadeIn(200*t);
     },
 
@@ -68,6 +68,9 @@ var DPManager = {
 
     initPlayPage : function(){
         setTimeout(DPManager.countdown, 100);
+        $("#guess-words li").each(function(i,w){
+            DPManager.showWord(i,w);
+        });
         console.log("Here we are");
         console.log(DPManager._words);
     }

@@ -1,11 +1,14 @@
 === On deck ===
-* Get words loading on game page
 * Get timer working on game page
 
 === To do ===
-* Add ajax routes
 
-* Add DB
+* Decide on behavior for "reload" on the game page.
+
+* Add cached word list
+* Add DB: themed word lists
+* Add DB: results
+
 * Add pictures to instructions
 
 === Done ===
@@ -14,4 +17,4 @@
 * Scaffold all pages
 * Clean up instructions
 * Load a proper number of words
-
+* Get words loading on game page
