@@ -1,32 +1,6 @@
-$("#playff").live("pageinit", function() {
-    timer = 6000;
-
-    $("#guess-words li").each(function(i,w){
-        set_word(i,w);
-    });
-
-    $("#guess-words li").click(function(){
-        set_word(2,this);
-    });
-
-    game_time = 599;
-    $("#game-time").html( Math.floor(game_time/10)+"."+(game_time%10) );
-
-    $("#guess-words li").swipe(function(){
-        $(this).hide();
-    });
-
-    setTimeout(countdown, 100);
-});
-
-
 var DPManager = {
     _words : [],
-    _time : 0,
-
-    next_word : function(){
-        return(word_list[Math.floor(Math.random()*word_list.length)]);
-    },
+    _timer : 0,
 
     showWord : function(t,w){
         $("h3", w)
@@ -36,10 +10,10 @@ var DPManager = {
     },
 
     countdown : function(){
-        timer -= 100;
-        $("#game-time").html( (timer/1000).toFixed(1) );
-        if( timer > 0 ){
-            setTimeout(countdown, 100);
+        DPManager._timer -= 100;
+        $("#game-time").html( (DPManager._timer/1000).toFixed(1) );
+        if( DPManager._timer > 0 ){
+            setTimeout(DPManager.countdown, 100);
         }
         else{
             //The game is now over
@@ -52,12 +26,11 @@ var DPManager = {
     },
 
     startGame : function(){
-        DPManager._time = 6000;
         $.mobile.changePage('/#countdown');
     },
-    pauseGame : function(){},
 
     initCountdownPage : function(){
+        DPManager._timer = 60000;
         $.get(
             '/ajax/load-words',
             {},
@@ -66,14 +39,17 @@ var DPManager = {
         );
     },
 
-    initPlayPage : function(){
+    beforeShowPlay : function(){
+
+        $("#guess-words li")
+            .swipe(function(){ $(this).hide(); })
+            .each(function(i,w){ DPManager.showWord(i,w); });
+
+        $("#guess-words li")
+
         setTimeout(DPManager.countdown, 100);
-        $("#guess-words li").each(function(i,w){
-            DPManager.showWord(i,w);
-        });
-        console.log("Here we are");
-        console.log(DPManager._words);
     }
+
 };
 
 $(function(){
@@ -82,5 +58,5 @@ $(function(){
 
     //Page init events
     $('#countdown').live('pageshow', DPManager.initCountdownPage);
-    $('#play').live('pagebeforeshow', DPManager.initPlayPage);
+    $('#play').live('pagebeforeshow', DPManager.beforeShowPlay);
 });
