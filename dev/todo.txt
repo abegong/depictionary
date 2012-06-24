@@ -1,21 +1,17 @@
 === On deck ===
-* Get timer working
-
+* Get words loading on game page
+* Get timer working on game page
 
 === To do ===
 * Add ajax routes
 
-* Add themes
-* Clean up instructions
-
+* Add DB
+* Add pictures to instructions
 
 === Done ===
 * Wrap as a cyclone project
 * Get templates working
 * Scaffold all pages
-
-
-
-
-
+* Clean up instructions
+* Load a proper number of words
 
