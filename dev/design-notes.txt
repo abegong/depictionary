@@ -1,0 +1,8 @@
+=== Routes ===
+
+/#setup
+/#get-ready
+/#play
+/#pause
+
+/jsonp/

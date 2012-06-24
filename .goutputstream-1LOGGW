@@ -19,11 +19,8 @@ class RedirectHandler(cyclone.web.RequestHandler):
 
 class OpenTemplateHandler(cyclone.web.RequestHandler):
     def get(self, path):
+        print path
         self.render(path+'.html')
-
-class HtmlHandler(cyclone.web.RequestHandler):
-    def get(self):
-        self.render('depictionary.html')
 
 class JsonpHandler(cyclone.web.RequestHandler):
     '''Usage: /jsonp?word=ninja'''
@@ -50,10 +47,9 @@ function parseWikiJson(data){
 class Application(cyclone.web.Application):
     def __init__(self):
         handlers = [
-            (r"/", HtmlHandler),
-#            (r"/", RedirectHandler, {'url':'/home'}),
+            (r"/", RedirectHandler, {'url':'/#set-up'}),
             (r"/jsonp/?", JsonpHandler),
-#            (r"/(.*?)/?", OpenTemplateHandler),
+            (r"/(.*?)/?", OpenTemplateHandler),
         ]
         
         settings = dict(
