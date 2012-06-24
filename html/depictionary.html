@@ -21,10 +21,10 @@
     </div>
 
     <div data-role="content">
+<!--
         <p><b>Players : </b>[Text entry]</p>
 
         <p><b>Advanced preferences</b></p>
-<!--
         <p><b>Topic : </b>[Text entry]</p>
         <p><b>Difficulty : </b>[Slider]</p>
         <p><b>Speed : </b>[Slider]</p>
@@ -39,9 +39,9 @@
         </div>
 -->
 
-        <p><a href="#countdown" data-role="button" data-theme="b">Start a game</a></p> 
+        <p><a id="start-game" data-role="button" data-theme="b">Start a game</a></p> 
 
-<!--        <div data-role="collapsible"> -->
+        <div data-role="collapsible">
             <h3>Rules</h3>
             <p><b>Object</b>: Score points by depicting and guessing as many words as possible.</p>
 
@@ -51,8 +51,8 @@
 
             <p><b>Scoring</b>: When you are the depictor, you score 3 points for every word guessed.  When you are guessing, you score one point for each word you guess.</p>
 
-            <p>Teams: there are no teams</p>
-<!--        </div> -->
+            <p><b>Teams</b>: There are no teams</p>
+        </div>
     </div>
 </div>
 
@@ -110,8 +110,8 @@
 <div data-role="page" id="countdown" data-transition="fade">
     <div data-role="header">
         <a id="pause" href="#pause" data-direction="reverse" data-role="button" data-icon="arrow-l">Pause</a>
-        <h1>[guessing game]</h1>
-        <a id="counter"><span id="game-points">135</span> : <span id="game-docs">14</span></a>
+        <h1><span style="color:#88f;">depict</span><span style="color:#bbb;">ionary</span></h1>
+<!--        <a id="counter"><span id="game-points">135</span> : <span id="game-docs">14</span></a> -->
     </div>
 
     <div data-role="content">

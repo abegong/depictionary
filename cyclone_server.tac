@@ -5,6 +5,9 @@ from twisted.web import static, server
 import cyclone.web
 import cyclone.httpserver
 
+import json
+import loremipsum
+
 try:
     _port = int(os.environ["PORT"])
 except:
@@ -25,11 +28,19 @@ class HtmlHandler(cyclone.web.RequestHandler):
     def get(self):
         self.render('depictionary.html')
 
+class JsonHandler(cyclone.web.RequestHandler):
+    def get(self):
+        result = {
+            "words" : loremipsum.get_sentence().split()
+        }
+        self.write(json.dumps(result, indent=2))
+
+
 class JsonpHandler(cyclone.web.RequestHandler):
-    '''Usage: /jsonp?word=ninja'''
+    '''Usage: /jsonp?theme=ninja'''
 
     def get(self):
-        word = self.get_argument('word')
+        word = self.get_argument('theme')
         wiki_query = 'http://en.wikipedia.org/w/api.php?action=parse&page='+word+'&prop=text|links&format=json&callback=parseWikiJson'
         result = '''
 <html>
@@ -53,6 +64,7 @@ class Application(cyclone.web.Application):
             (r"/", HtmlHandler),
 #            (r"/", RedirectHandler, {'url':'/home'}),
             (r"/jsonp/?", JsonpHandler),
+            (r"/ajax/load-words/?", JsonHandler),
 #            (r"/(.*?)/?", OpenTemplateHandler),
         ]
         
