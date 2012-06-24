@@ -6,7 +6,6 @@ import cyclone.web
 import cyclone.httpserver
 
 import json
-import loremipsum
 import random 
 
 try:
