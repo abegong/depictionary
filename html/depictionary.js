@@ -42,10 +42,15 @@ var DPManager = {
     beforeShowPlay : function(){
 
         $("#guess-words li")
-            .swipe(function(){ $(this).hide(); })
+//            .swipe(function(){ $(this).hide(); })
+            .swipe(function(){
+                $(this).removeClass('ui-body-c')
+                $(this).addClass('ui-body-a')
+//                $("#guess-words").listview();
+            })
+//('ui-bar ui-bar-c') })
             .each(function(i,w){ DPManager.showWord(i,w); });
 
-        $("#guess-words li")
 
         setTimeout(DPManager.countdown, 100);
     }

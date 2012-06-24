@@ -1,14 +1,14 @@
 === On deck ===
-* Get timer working on game page
 
 === To do ===
+* Decide on behavior for "reload" on the game pages.
 
-* Decide on behavior for "reload" on the game page.
 
 * Add cached word list
 * Add DB: themed word lists
 * Add DB: results
 
+* Add a theme with better colors
 * Add pictures to instructions
 
 === Done ===
@@ -18,3 +18,6 @@
 * Clean up instructions
 * Load a proper number of words
 * Get words loading on game page
+* Get timer working on game page
+* Change swipe behavior to highlight themes.
+
